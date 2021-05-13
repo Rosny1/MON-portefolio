@@ -307,7 +307,20 @@
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script src="script.js">
+        $(document).ready(function() {
+    $(window).scroll(function() {
+        if (this.scrollY > 20) {
+            $('.navbar').addClass("sticky");
+        } else {
+            $('.navbar').removeClass("sticky");
+        }
+    })
+    $('.menu-btn').click(function() {
+        $('.navbar .menu').toggleClass("active");
+    })
+});
+   </script>
 </body>
 
 </html>
